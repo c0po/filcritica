@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Ubuntu&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px){
+    body{
+        background-image: url("../img/hero.jpg");
+        background-size:cover;
+        background-attachment: fixed;                                                                       
+        width: auto;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto auto auto 15rem; 
+        grid-template-rows: auto auto auto auto ;
+        grid-template-areas: "header header header header"
+                        "carousel carousel carousel carousel"
+                        "main main main aside"
+                        "footer footer footer footer";
+
+    }
+
+    .carousel-grid{
+        grid-area: carousel;
+    }
+    .main{
+        grid-area: main;
+    }
+
+    /*------------Nav-----------*/
+    .header{
+        grid-area: header;
+    }
+    a{
+        text-decoration:none;
+        color: black;
+        align-items: center;
+        position: relative;
+        background-image: linear-gradient(#69A7CE, #69A7CE);
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 0.1rem;
+    
+    
+
+    }
+    .nav-item{
+        font-family: 'Ubuntu', sans-serif;
+        padding: 0.5rem;
+    
+
+    }
+    a:hover{
+        border-radius: 10px;
+        background-size: 100% 0.1rem;
+        transition: ease-out 0.5s;
+        color: #69A7CE;
+    
+    }
+    .main__div:hover{
+        border-radius: 15px;
+        background-size: 100% 0.1rem;
+        transition: ease-out 0.5s;
+        color: #69A7CE;;
+    }
+    a:active{
+        color: #69A7CE ;
+        border-bottom: 1px solid #69A7CE;
+    }
+
+/*------------------LOGO-----------*/
+    .logo__img{
+        width: auto;
+        height: 2rem;
+        display: flex;
+        align-content: center;
+        z-index: 2;
+        position:sticky;
+    
+    }
+    .header__animated{
+        animation: logo 2s ease-in;
+    }
+    @keyframes logo {
+        0%{transform:translateY(15rem) translateX(40rem) scale(10);}
+        100%{transform:translateY(0rem);}
+    }
+    .img-carrusel{
+        height: 100vh;
+        object-fit: cover;
+        object-position:40% 40%;
+    }
+    h1{
+        font-family: 'Ubuntu', sans-serif;
+        padding: 1rem;
+    }
+
+    .main h2{
+        font-family: 'Ubuntu', sans-serif;
+        text-align: left;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+    .div__article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+        background-color: #fafafade;
+        backdrop-filter: blur(4px);
+        border-radius: 5px;
+        height: 100%;
+        margin: 1rem;
+        padding-right: 1rem;
+
+    }
+    .main img{
+        width: 15rem;
+        height: min-content;
+        padding-left: 2rem;
+    }
+    .main a{
+        display: flex;
+        text-decoration: none;
+        color: black;
+        background-color: #fafafade;
+        border-radius: 5px;
+        height: auto;
+        margin: 1rem;
+        padding: 2rem 1rem 2rem 1rem
+    }
+    .main p{
+        font-family:'Playfair Display', serif;
+        padding-left: 1rem;
+
+    }
+    .aside{
+        width: auto;
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #fafafade;
+        border-radius: 5px;
+        backdrop-filter: blur(4px);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-right: 2rem;
+    
+    
+    }
+    .aside img{
+        width: 10rem;
+        height: 25rem;
+    
+    }
+    .footer{
+        grid-area: footer;
+        background-color: #F5F5EB;
+        width: 100vw;
+        height: 15rem;
+        border-top: solid 2px #e0e0d783;
+        font-family: 'Ubuntu', sans-serif;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "social""info";
+
+    
+    
+    }
+    .footer p{
+        color: black;
+    }
+    .footer a{
+        text-decoration: none;
+        color: black;
+    }
+    .info{
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-top: solid 2px #e0e0d7;
+    }
+
+    .social{
+        grid-area: social;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .social__logo{
+        width: 3rem;
+        height: 3rem;
+    
+    }
+/*-------Formularios--------*/
+
+    .main__formulario{
+        background-color: #fafafade;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+        height: 100%;
+    }
+    .main__contacto{
+        min-height: 50rem;
+    }
+    .main section form{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        color: white;
+        font-size: 10px;
+    
+    }
+    .form__placeholder{
+        padding: 0.5rem;
+        margin: 1rem; 
+    }
+
+    .form__fieldset{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #fafafade;
+        padding: 1rem;
+    
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    body{
+        background-image: url("../img/hero.jpg");
+        background-size:cover;
+        background-attachment: fixed;                                                                       
+        width: auto;
+        height: auto;
+       
+    }
+    .aside{
+        grid-area: aside;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 5px;
+        width: 100%;
+        
+    }
+    .aside img{
+        width: 100%;
+        height: 5rem;
+        margin: 1rem;
+        
+    }
+  
+    .footer{
+        grid-area: footer;
+        background-color: #F5F5EB;
+        width: 100vw;
+        height: 15rem;
+        border-top: solid 2px #e0e0d783;
+        font-family: 'Ubuntu', sans-serif;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "social""info";
+        
+        
+        
+    }
+    .footer p{
+        color: black;
+
+    }
+    .footer a{
+        text-decoration: none;
+        color: black;
+    }
+    .info{
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-top: solid 2px #e0e0d7;
+    }
+    
+    .social{
+        grid-area: social;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .social__logo{
+        width: 3rem;
+        height: 3rem;
+        
+    }
+    
+    .carousel-grid{
+        grid-area: carousel;
+    }
+    .main{
+        grid-area: main;
+    }
+    
+    /*------------Nav-----------*/
+    .header{
+        grid-area: header;
+    }
+  
+    a{
+        text-decoration:none;
+        color: black;
+        align-items: center;
+        position: relative;
+        background-image: linear-gradient(#69A7CE, #69A7CE);
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 0.1rem;
+        
+        
+    
+    }
+    .nav-item{
+        font-family: 'Ubuntu', sans-serif;
+        padding: 0.5rem;
+    
+    
+    }
+    a:hover{
+        border-radius: 10px;
+        background-size: 100% 0.1rem;
+        transition: ease-out 0.5s;
+        color: #69A7CE;
+        
+    }
+    .main__div:hover{
+        border-radius: 15px;
+        background-size: 100% 0.1rem;
+        transition: ease-out 0.5s;
+        color: #69A7CE;;
+    }
+    a:active{
+        color: #69A7CE ;
+        border-bottom: 1px solid #69A7CE;
+    }
+
+/*------------------LOGO-----------*/
+    .logo__img{
+        width: auto;
+        height: 2rem;
+        display: flex;
+        align-content: center;
+        z-index: 2;
+        position:sticky;
+        
+    }
+    .header__animated{
+        animation: logo 2s ease-in;
+    }
+    @keyframes logo {
+        0%{transform:translateY(15rem) translateX(40rem) scale(10);}
+        100%{transform:translateY(0rem);}
+    }
+    .img-carrusel{
+        height: 50vh;
+        object-fit: cover;
+        object-position:40% 40%;
+    }
+    h1{
+        font-family: 'Ubuntu', sans-serif;
+        padding: 1rem;
+    }
+
+    .main h2{
+        font-family: 'Ubuntu', sans-serif;
+        text-align: left;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+    .div__article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+        background-color: #fafafade;
+        backdrop-filter: blur(4px);
+        border-radius: 5px;
+        height: 100%;
+        margin: 1rem;
+        padding-right: 1rem;
+
+    }
+    .a__article{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: justify;
+    }
+    .a__article h2{
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+    .main img{
+        width: 15rem;
+        height: min-content;
+        padding-left: 0rem;
+    }
+    .main a{
+        display: flex;
+        text-decoration: none;
+        color: black;
+        background-color: #fafafade;
+        border-radius: 5px;
+        height: auto;
+        margin: 1rem;
+        padding: 2rem 1rem 2rem 1rem
+    }
+    .main p{
+        font-family:'Playfair Display', serif;
+        padding-left: 1rem;
+
+    }
+        
+    /*-------Formularios--------*/
+    
+    .main__formulario{
+        background-color: #fafafade;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+        height: 100%;
+    }
+    .main__contacto{
+        min-height: 50rem;
+    }
+    .main section form{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        color: white;
+        font-size: 10px;
+        
+    }
+    .form__placeholder{
+        padding: 0.5rem;
+        margin: 1rem; 
+    }
+    
+    .form__fieldset{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #fafafade;
+        padding: 1rem;
+        
+    }    
+}
